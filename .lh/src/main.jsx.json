@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1723673020200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723673281458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n-import { StrictMode } from 'react'\n-import { createRoot } from 'react-dom/client'\n-import App from './App.jsx'\n-import './index.css'\n+import React from 'react';\n+import { createRoot } from 'react-dom/client';\n+import App from './App';\n \n createRoot(document.getElementById('root')).render(\n-  <StrictMode>\n+  <React.StrictMode>\n     <App />\n-  </StrictMode>,\n-)\n+  </React.StrictMode>\n+);\n"
+                },
+                {
+                    "date": 1723816808272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\n import { createRoot } from 'react-dom/client';\n import App from './App';\n+import './index.css';\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <App />\n"
+                },
+                {
+                    "date": 1723816955055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n import { createRoot } from 'react-dom/client';\n import App from './App';\n-import './index.css';\n \n+\n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <App />\n   </React.StrictMode>\n"
+                },
+                {
+                    "date": 1723816992096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import React from 'react';\n+import { createRoot } from 'react-dom/client';\n+import App from './App';\n+import './index.css';\n+\n+createRoot(document.getElementById('root')).render(\n+  <React.StrictMode>\n+    <App />\n+  </React.StrictMode>\n+);\n"
+                },
+                {
+                    "date": 1723817135920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,9 @@\n import React from 'react';\n import { createRoot } from 'react-dom/client';\n import App from './App';\n-import './index.css';\n \n-createRoot(document.getElementById('root')).render(\n-  <React.StrictMode>\n-    <App />\n-  </React.StrictMode>\n-);\n-import React from 'react';\n-import { createRoot } from 'react-dom/client';\n-import App from './App';\n \n-\n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <App />\n   </React.StrictMode>\n"
+                },
+                {
+                    "date": 1723817181315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n import { createRoot } from 'react-dom/client';\n import App from './App';\n+import './index.css';\n \n-\n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <App />\n   </React.StrictMode>\n"
+                }
+            ],
+            "date": 1723673020200,
+            "name": "Commit-0",
+            "content": "import { StrictMode } from 'react'\nimport { createRoot } from 'react-dom/client'\nimport App from './App.jsx'\nimport './index.css'\n\ncreateRoot(document.getElementById('root')).render(\n  <StrictMode>\n    <App />\n  </StrictMode>,\n)\n"
+        }
+    ]
+}

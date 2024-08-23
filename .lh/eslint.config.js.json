@@ -1,0 +1,18 @@
+{
+    "sourceFile": "eslint.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723673883345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723673883345,
+            "name": "Commit-0",
+            "content": "import globals from \"globals\";\nimport pluginJs from \"@eslint/js\";\nimport pluginReact from \"eslint-plugin-react\";\n\nexport default [\n  {\n    files: [\"**/*.{js,mjs,cjs,jsx}\"],\n    languageOptions: {\n      sourceType: \"module\", // Use ES Modules as the default\n      globals: globals.browser, // Use browser globals\n    },\n    rules: {\n      // You can add or override specific rules here if needed\n    },\n  },\n  {\n    files: [\"**/*.js\"],\n    languageOptions: {\n      sourceType: \"commonjs\", // Override to CommonJS for .js files if necessary\n    },\n  },\n  pluginJs.configs.recommended,\n  {\n    ...pluginReact.configs.flat.recommended,\n    rules: {\n      ...pluginReact.configs.flat.recommended.rules,\n      \"react/react-in-jsx-scope\": \"off\", // Disable the rule requiring React in scope\n    },\n  },\n];\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1724228003532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1724228334590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n-// vite.config.js\r\n import { defineConfig } from 'vite';\r\n \r\n export default defineConfig({\r\n   server: {\r\n     proxy: {\r\n       '/api': {\r\n-        target: 'https://www.bmw.co.za', // The target server URL\r\n+        target: 'https://www.bmw.co.za',\r\n         changeOrigin: true,\r\n-        rewrite: (path) => path.replace(/^\\/api/, ''), // Optional: adjust path if needed\r\n+        rewrite: (path) => path.replace(/^\\/api/, ''),\r\n       },\r\n     },\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1724229570183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n+// vite.config.js\r\n import { defineConfig } from 'vite';\r\n \r\n export default defineConfig({\r\n   server: {\r\n     proxy: {\r\n       '/api': {\r\n-        target: 'https://www.bmw.co.za',\r\n+        target: 'https://www.bmw.co.za', // The target domain\r\n         changeOrigin: true,\r\n         rewrite: (path) => path.replace(/^\\/api/, ''),\r\n       },\r\n     },\r\n"
+                }
+            ],
+            "date": 1724228003532,
+            "name": "Commit-0",
+            "content": "// vite.config.js\r\nimport { defineConfig } from 'vite';\r\n\r\nexport default defineConfig({\r\n  server: {\r\n    proxy: {\r\n      '/api': {\r\n        target: 'https://www.bmw.co.za', // The target server URL\r\n        changeOrigin: true,\r\n        rewrite: (path) => path.replace(/^\\/api/, ''), // Optional: adjust path if needed\r\n      },\r\n    },\r\n  },\r\n});\r\n"
+        }
+    ]
+}

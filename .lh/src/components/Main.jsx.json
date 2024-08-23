@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/components/Main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1723673495050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723674000057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Main() {\r\n-    return(\r\n+    return (\r\n         <div>\r\n-            \r\n+\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723674710064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-\r\n+hellll\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723674914092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-hellll\r\n+123\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723698369525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-123\r\n+\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723698955796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-\r\n+                <img src=\"bmw.png\" alt=\"bmw-demo-picture\" />\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723699096870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export default function Main() {\r\n+    return (\r\n+        <div>\r\n+                <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" />\r\n+        </div>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723699267769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,9 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-                <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" />\r\n+\r\n+        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" style=\"width: 100%; height: auto;\" />\r\n+\r\n         </div>\r\n     )\r\n-}\n-export default function Main() {\r\n-    return (\r\n-        <div>\r\n-                <img src=\"bmw.png\" alt=\"bmw-demo-picture\" />\r\n-        </div>\r\n-    )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723699408153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n \r\n-        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" style=\"width: 100%; height: auto;\" />\r\n+        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\"  />\r\n \r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723699476843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n+        <div className=\"bmw-img \"> <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\"  /> </div>\r\n+       \r\n \r\n-        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\"  />\r\n-\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723699522411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-        <div className=\"bmw-img \"> <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\"  /> </div>\r\n+        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" /> \r\n        \r\n \r\n         </div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1723717116403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" /> \r\n+        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" \r\n+        className=\"bgImage\" /> \r\n        \r\n \r\n         </div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1723717894132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-        <img src=\"https://f30.bimmerpost.com/forums/attachment.php?attachmentid=1375160&d=1457024506\" alt=\"bmw-demo-picture\" \r\n+        <img src=\"https://www.fineprintart.com/images/history-of-the-bmw-logo/history-of-the-bmw-logo-1.jpg\" alt=\"bmw-demo-picture\" \r\n         className=\"bgImage\" /> \r\n        \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1723718184087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-        <img src=\"https://www.fineprintart.com/images/history-of-the-bmw-logo/history-of-the-bmw-logo-1.jpg\" alt=\"bmw-demo-picture\" \r\n+        <img src=\"https://preview.redd.it/what-is-your-favorite-m3-g…o=webp&s=1d796b733cbd1907341eb1858380b1d538d4934d\" alt=\"bmw-demo-picture\" \r\n         className=\"bgImage\" /> \r\n        \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1723718378442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Main() {\r\n     return (\r\n         <div>\r\n-        <img src=\"https://preview.redd.it/what-is-your-favorite-m3-g…o=webp&s=1d796b733cbd1907341eb1858380b1d538d4934d\" alt=\"bmw-demo-picture\" \r\n+        <img src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\" alt=\"bmw-demo-picture\" \r\n         className=\"bgImage\" /> \r\n        \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1723720600271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n export default function Main() {\r\n     return (\r\n-        <div>\r\n-        <img src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\" alt=\"bmw-demo-picture\" \r\n-        className=\"bgImage\" /> \r\n-       \r\n-\r\n+        <div className=\"imgContainer\">\r\n+            <img src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\" alt=\"bmw-demo-picture\"\r\n+                className=\"bgImage\" />\r\n         </div>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723721597728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n+// Main.jsx\r\n export default function Main() {\r\n     return (\r\n-        <div className=\"imgContainer\">\r\n-            <img src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\" alt=\"bmw-demo-picture\"\r\n-                className=\"bgImage\" />\r\n-        </div>\r\n-    )\r\n\\ No newline at end of file\n-}\n+      <div className=\"imgContainer\">\r\n+        <img\r\n+          src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\"\r\n+          alt=\"bmw-demo-picture\"\r\n+          className=\"bgImage\"\r\n+        />\r\n+      </div>\r\n+    );\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1724057867450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n export default function Main() {\r\n     return (\r\n       <div className=\"imgContainer\">\r\n         <img\r\n-          src=\"https://d2dsc1gf0t80gb.cloudfront.net/wp-content/uploads/2020/03/12142558/BMW-AG-1-1000x741.jpg\"\r\n+          src=\"https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg\"\r\n           alt=\"bmw-demo-picture\"\r\n           className=\"bgImage\"\r\n         />\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1724058850709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,13 @@\n           src=\"https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg\"\r\n           alt=\"bmw-demo-picture\"\r\n           className=\"bgImage\"\r\n         />\r\n+         <img\r\n+          src=\"https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg\"\r\n+          alt=\"bmw-demo-picture\"\r\n+          className=\"bgImage2\"\r\n+        />\r\n       </div>\r\n     );\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1724061222699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,13 @@\n           src=\"https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg\"\r\n           alt=\"bmw-demo-picture\"\r\n           className=\"bgImage2\"\r\n         />\r\n+        <img\r\n+          src=\"https://mir-s3-cdn-cf.behance.net/projects/404/12385757.5482bcb611bc2.jpg\"\r\n+          alt=\"bmw-demo-picture\"\r\n+          className=\"bgImage\"\r\n+        />\r\n       </div>\r\n     );\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1724061284393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,8 @@\n           src=\"https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg\"\r\n           alt=\"bmw-demo-picture\"\r\n           className=\"bgImage2\"\r\n         />\r\n-        <img\r\n-          src=\"https://mir-s3-cdn-cf.behance.net/projects/404/12385757.5482bcb611bc2.jpg\"\r\n-          alt=\"bmw-demo-picture\"\r\n-          className=\"bgImage\"\r\n-        />\r\n       </div>\r\n     );\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1724320332053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n // Main.jsx\r\n-export default function Main() {\r\n+export default function Main(props) {\r\n+  const { data } = props\r\n     return (\r\n       <div className=\"imgContainer\">\r\n         <img\r\n-          src=\"https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg\"\r\n-          alt=\"bmw-demo-picture\"\r\n+          src={data.hdurl}\r\n+          alt={data.title || 'bg-img'}\r\n           className=\"bgImage\"\r\n         />\r\n          <img\r\n           src=\"https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg\"\r\n"
+                },
+                {
+                    "date": 1724320454518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n           alt={data.title || 'bg-img'}\r\n           className=\"bgImage\"\r\n         />\r\n          <img\r\n-          src=\"https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg\"\r\n-          alt=\"bmw-demo-picture\"\r\n+          src={data.hdurl}\r\n+          alt={data.title || 'bg-img'}\r\n           className=\"bgImage2\"\r\n         />\r\n       </div>\r\n     );\r\n"
+                },
+                {
+                    "date": 1724321541883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,17 @@\n-// Main.jsx\r\n export default function Main(props) {\r\n-  const { data } = props\r\n-    return (\r\n-      <div className=\"imgContainer\">\r\n-        <img\r\n-          src={data.hdurl}\r\n-          alt={data.title || 'bg-img'}\r\n-          className=\"bgImage\"\r\n-        />\r\n-         <img\r\n-          src={data.hdurl}\r\n-          alt={data.title || 'bg-img'}\r\n-          className=\"bgImage2\"\r\n-        />\r\n-      </div>\r\n-    );\r\n-  }\r\n-  \n\\ No newline at end of file\n+  const { data } = props;\r\n+  return (\r\n+    <div className=\"imgContainer\">\r\n+      <img\r\n+        src={data.hdurl}\r\n+        alt={data.title || \"bg-img\"}\r\n+        className=\"bgImage\"\r\n+      />\r\n+      <img\r\n+        src={data.hdurl2}  // Use the second image URL\r\n+        alt={data.title || \"bg-img\"}\r\n+        className=\"bgImage2\"\r\n+      />\r\n+    </div>\r\n+  );\r\n+}\r\n"
+                }
+            ],
+            "date": 1723673495050,
+            "name": "Commit-0",
+            "content": "export default function Main() {\r\n    return(\r\n        <div>\r\n            \r\n        </div>\r\n    )\r\n}"
+        }
+    ]
+}
