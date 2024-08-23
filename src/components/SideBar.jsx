@@ -1,4 +1,3 @@
-// SideBar.jsx
 export default function SideBar(props) {
   const { handleToggleModal, content } = props;
 

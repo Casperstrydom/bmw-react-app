@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1723674312168,
@@ -72,6 +72,10 @@
                 {
                     "date": 1724316208143,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,13 @@\n // SideBar.jsx\r\n export default function SideBar(props) {\r\n-  const { handleToggleModal, data } = props;\r\n+  const { handleToggleModal, content } = props;\r\n \r\n   return (\r\n     <div className=\"sidebar\">\r\n       <div onClick={handleToggleModal} className=\"bgOverlay\"></div>\r\n       <div className=\"sidebarContents\">\r\n-        <h2>{data?.title}</h2>\r\n-        <div>\r\n-          <p>Description</p>\r\n-          <p>{data?.description}</p>\r\n-        </div>\r\n+        <div dangerouslySetInnerHTML={{ __html: content }} />\r\n         <button onClick={handleToggleModal}>\r\n           <i className=\"fa-solid fa-hand-point-right\"></i>\r\n         </button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1724402721562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-// SideBar.jsx\r\n export default function SideBar(props) {\r\n   const { handleToggleModal, content } = props;\r\n \r\n   return (\r\n"
                 }
             ],
             "date": 1723674312168,

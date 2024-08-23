@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1723674154842,
@@ -72,6 +72,10 @@
                 {
                     "date": 1724316222703,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,12 @@\n // Footer.jsx\r\n export default function Footer(props) {\r\n-    const { showModal, handleToggleModal, data } = props;\r\n+    const { handleToggleModal, data } = props;\r\n   \r\n     return (\r\n       <footer>\r\n         <div className=\"bgGradient\"></div>\r\n         <div>\r\n-          <p>\r\n-            <strong>BMW offers amazing driving performance with high-powered engines and a sleek look.</strong> \r\n-            With ultra-responsive steering and even weight distribution, you can zoom these cars through tight turns. \r\n-            What's even better is how great they look. BMW, in full Bayerische Motoren Werke AG, is a German automaker \r\n-            noted for quality sports sedans and motorcycles. Headquarters are in Munich.\r\n-            <strong>It originated in 1916 as Bayerische Flugzeug-Werke,</strong> a builder of aircraft engines, but assumed \r\n-            the name Bayerische Motoren Werke in July 1917 and began producing motorcycles in the 1920s. BMW entered the automobile \r\n-            business in 1928. The company’s R32 motorcycle set a world speed record that was not broken until 1937. During World War II, \r\n-            BMW built the world’s first jet airplane engines, used by the Luftwaffe, Germany’s air force. After the war, the company tried \r\n-            to move into the small-car market but found that it could not compete effectively against Volkswagen’s compact, inexpensive autos. \r\n-            By 1959 the company was on the verge of bankruptcy, and its managers were planning to sell the firm to Daimler-Benz.\r\n-            <strong>In that year, however, BMW pulled out of its financial slump;</strong> German entrepreneur Herbert Quandt acquired a controlling \r\n-            interest in the firm, and BMW introduced its 700 series, soon followed by the equally successful 1500 model. At about the same time, \r\n-            the company introduced a new series of motorcycles that were particularly popular in the United States.\r\n-            <strong>BMW was firmly established as a premium automobile brand by the end of the 20th century.</strong>\r\n-          </p>\r\n           <h2>{data?.title}</h2>\r\n           <h1>BMW PROJECT</h1>\r\n         </div>\r\n         <button onClick={handleToggleModal}>\r\n"
+                },
+                {
+                    "date": 1724402734382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,16 @@\n-// Footer.jsx\r\n export default function Footer(props) {\r\n-    const { handleToggleModal, data } = props;\r\n-  \r\n-    return (\r\n-      <footer>\r\n-        <div className=\"bgGradient\"></div>\r\n-        <div>\r\n-          <h2>{data?.title}</h2>\r\n-          <h1>BMW PROJECT</h1>\r\n-        </div>\r\n-        <button onClick={handleToggleModal}>\r\n-          <i className=\"fa-solid fa-circle-question\"></i>\r\n-        </button>\r\n-      </footer>\r\n-    );\r\n-  }\r\n-  \n\\ No newline at end of file\n+  const { handleToggleModal, data } = props;\r\n+\r\n+  return (\r\n+    <footer>\r\n+      <div className=\"bgGradient\"></div>\r\n+      <div>\r\n+        <h2>{data?.title}</h2>\r\n+        <h1>BMW PROJECT</h1>\r\n+      </div>\r\n+      <button onClick={handleToggleModal}>\r\n+        <i className=\"fa-solid fa-circle-question\"></i>\r\n+      </button>\r\n+    </footer>\r\n+  );\r\n+}\r\n"
                 }
             ],
             "date": 1723674154842,

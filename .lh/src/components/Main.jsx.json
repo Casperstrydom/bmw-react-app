@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1723673495050,
@@ -100,6 +100,10 @@
                 {
                     "date": 1724321541883,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,17 @@\n-// Main.jsx\r\n export default function Main(props) {\r\n-  const { data } = props\r\n-    return (\r\n-      <div className=\"imgContainer\">\r\n-        <img\r\n-          src={data.hdurl}\r\n-          alt={data.title || 'bg-img'}\r\n-          className=\"bgImage\"\r\n-        />\r\n-         <img\r\n-          src={data.hdurl}\r\n-          alt={data.title || 'bg-img'}\r\n-          className=\"bgImage2\"\r\n-        />\r\n-      </div>\r\n-    );\r\n-  }\r\n-  \n\\ No newline at end of file\n+  const { data } = props;\r\n+  return (\r\n+    <div className=\"imgContainer\">\r\n+      <img\r\n+        src={data.hdurl}\r\n+        alt={data.title || \"bg-img\"}\r\n+        className=\"bgImage\"\r\n+      />\r\n+      <img\r\n+        src={data.hdurl2}  // Use the second image URL\r\n+        alt={data.title || \"bg-img\"}\r\n+        className=\"bgImage2\"\r\n+      />\r\n+    </div>\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1724402702573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,20 @@\n export default function Main(props) {\r\n   const { data } = props;\r\n+\r\n+  if (!data) {\r\n+    return <div className=\"loadingState\">Loading...</div>;\r\n+  }\r\n+\r\n   return (\r\n     <div className=\"imgContainer\">\r\n       <img\r\n         src={data.hdurl}\r\n         alt={data.title || \"bg-img\"}\r\n         className=\"bgImage\"\r\n       />\r\n       <img\r\n-        src={data.hdurl2}  // Use the second image URL\r\n+        src={data.hdurl2}\r\n         alt={data.title || \"bg-img\"}\r\n         className=\"bgImage2\"\r\n       />\r\n     </div>\r\n"
                 }
             ],
             "date": 1723673495050,

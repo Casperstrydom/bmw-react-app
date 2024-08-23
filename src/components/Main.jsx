@@ -1,5 +1,10 @@
 export default function Main(props) {
   const { data } = props;
+
+  if (!data) {
+    return <div className="loadingState">Loading...</div>;
+  }
+
   return (
     <div className="imgContainer">
       <img
@@ -8,7 +13,7 @@ export default function Main(props) {
         className="bgImage"
       />
       <img
-        src={data.hdurl2}  // Use the second image URL
+        src={data.hdurl2}
         alt={data.title || "bg-img"}
         className="bgImage2"
       />

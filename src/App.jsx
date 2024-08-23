@@ -21,11 +21,10 @@ function App() {
       if (localStorage.getItem(localKey)) {
         const cachedData = JSON.parse(localStorage.getItem(localKey));
         setData(cachedData);
+        setIsLoading(false); // No need to display loader if data is cached
         console.log('Fetched from cache today');
         return;
-      } 
-
-      localStorage.clear();
+      }
 
       try {
         const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
@@ -51,7 +50,6 @@ function App() {
             subscriberCount: channelInfo.statistics.subscriberCount,
             viewCount: channelInfo.statistics.viewCount,
             videoCount: channelInfo.statistics.videoCount,
-            // Adding the custom image URLs
             hdurl: "https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg",
             hdurl2: "https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg",
           };
@@ -64,6 +62,7 @@ function App() {
         }
       } catch (error) {
         setError(error.message);
+        console.error('Fetch error:', error);
       } finally {
         setIsLoading(false);
       }
@@ -93,7 +92,7 @@ function App() {
       the company introduced a new series of motorcycles that were particularly popular in the United States.
       <strong>BMW was firmly established as a premium automobile brand by the end of the 20th century.</strong>
     </p> <hr/>
-    <p>BMW THANK'S ALL OUR  SPONSORS CLIENTS RETAILERS ENGINEERS FAN BASE GLOBAL.</p>
+    <p>BMW THANK'S ALL OUR SPONSORS CLIENTS RETAILERS ENGINEERS FAN BASE GLOBAL.</p>
   `;
 
   return (
