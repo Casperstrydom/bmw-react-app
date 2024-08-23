@@ -4,15 +4,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color: white;
   background-color: #000207;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 * {
@@ -32,7 +29,6 @@
   min-height: 100vh;
   background-color: #030615;
 }
-
 
 .imgContainer {
   display: flex;
@@ -63,8 +59,7 @@ footer div {
 }
 
 footer h2 {
- font-size: 1.4rem;
-
+  font-size: 1.4rem;
 }
 
 footer h1 {
@@ -121,8 +116,8 @@ footer button:hover {
   padding: 1rem;
   overflow-y: scroll;
   height: 100%;
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px; /* Adjust this as needed */
   margin-left: auto;
   background: #030615;
 }
@@ -140,12 +135,12 @@ footer button:hover {
   cursor: pointer;
   transition-duration: 200ms;
   padding: 1rem 0;
+  font-size: 1.2rem; /* Increase the font size for better readability */
 }
 
 .sidebarContents button:hover {
   opacity: 0.7;
 }
-
 
 .loadingState {
   display: flex; 
@@ -160,7 +155,6 @@ footer button:hover {
   animation: spin 1s linear infinite; 
 }
 
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -170,17 +164,32 @@ footer button:hover {
   }
 }
 
-@media (min-width: 640px) {
-.sidebar {
-position: relative;
-inset: unset;
-min-width: 30%;
-box-shadow: 0 0 40px 1px aqua;
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 
-}
+  .sidebarContents {
+    width: 100%;
+    padding: 1rem;
+  }
 
-.sidebarContents {
-margin: unset; 
-}
+  footer {
+    padding: 0.5rem; /* Reduce footer padding on mobile */
+    font-size: 0.8rem; /* Adjust footer text size */
+  }
 
+  footer button {
+    padding: 0.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Adjust button font size */
+  }
+
+  .loadingState i {
+    font-size: 2rem; /* Adjust loading icon size for mobile */
+  }
 }
