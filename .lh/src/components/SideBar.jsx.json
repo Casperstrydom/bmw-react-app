@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 17,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1723674312168,
@@ -76,6 +76,10 @@
                 {
                     "date": 1724402721562,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-// SideBar.jsx\r\n export default function SideBar(props) {\r\n   const { handleToggleModal, content } = props;\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1724466315068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+export default function SideBar(props) {\r\n+  const { handleToggleModal, content } = props;\r\n+\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      <div onClick={handleToggleModal} className=\"bgOverlay\"></div>\r\n+      <div className=\"sidebarContents\">\r\n+        <div dangerouslySetInnerHTML={{ __html: content }} />\r\n+        <button onClick={handleToggleModal}>\r\n+          {/* Removed the finger icon */}\r\n+        </button>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+}\r\n"
                 }
             ],
             "date": 1723674312168,

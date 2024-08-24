@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1723673495050,
@@ -104,6 +104,18 @@
                 {
                     "date": 1724402702573,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,20 @@\n export default function Main(props) {\r\n   const { data } = props;\r\n+\r\n+  if (!data) {\r\n+    return <div className=\"loadingState\">Loading...</div>;\r\n+  }\r\n+\r\n   return (\r\n     <div className=\"imgContainer\">\r\n       <img\r\n         src={data.hdurl}\r\n         alt={data.title || \"bg-img\"}\r\n         className=\"bgImage\"\r\n       />\r\n       <img\r\n-        src={data.hdurl2}  // Use the second image URL\r\n+        src={data.hdurl2}\r\n         alt={data.title || \"bg-img\"}\r\n         className=\"bgImage2\"\r\n       />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1724467620822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,21 @@\n \r\n   return (\r\n     <div className=\"imgContainer\">\r\n       <img\r\n-        src={data.hdurl}\r\n-        alt={data.title || \"bg-img\"}\r\n+        src=\"https://di-uploads-pod27.dealerinspire.com/bmwofmeridian/uploads/2022/03/2021-BMW-M3-thin-tall.jpg\"\r\n+        alt=\"BMW M3\"\r\n         className=\"bgImage\"\r\n       />\r\n       <img\r\n-        src={data.hdurl2}\r\n-        alt={data.title || \"bg-img\"}\r\n+        src=\"https://cdn.bmwcca.org/static/join/images/BMW-M2-Coupe_2500x1150.jpg\"\r\n+        alt=\"BMW M2 Coupe\"\r\n         className=\"bgImage2\"\r\n       />\r\n+      <img\r\n+        src=\"https://img-ik.cars.co.za/news-site-za/images/2024…90499808_lowRes_the-bmw-xm-label-red.jpg?tr=w-800\"\r\n+        alt=\"BMW XM Label Red\"\r\n+        className=\"bgImage3\"\r\n+      />\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1724467941433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n         alt=\"BMW M2 Coupe\"\r\n         className=\"bgImage2\"\r\n       />\r\n       <img\r\n-        src=\"https://img-ik.cars.co.za/news-site-za/images/2024…90499808_lowRes_the-bmw-xm-label-red.jpg?tr=w-800\"\r\n-        alt=\"BMW XM Label Red\"\r\n-        className=\"bgImage3\"\r\n+      src=\"\thttps://cdn.sportscardigest.com/wp-content/uploads…0220210091017/05-BMW-M3-Competition-xDrive-02.jpg\"\r\n+      alt=\"BMW M3\"\r\n+      className=\"bgImage3\"\r\n       />\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1724468018434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,7 @@\n         src=\"https://cdn.bmwcca.org/static/join/images/BMW-M2-Coupe_2500x1150.jpg\"\r\n         alt=\"BMW M2 Coupe\"\r\n         className=\"bgImage2\"\r\n       />\r\n-      <img\r\n-      src=\"\thttps://cdn.sportscardigest.com/wp-content/uploads…0220210091017/05-BMW-M3-Competition-xDrive-02.jpg\"\r\n-      alt=\"BMW M3\"\r\n-      className=\"bgImage3\"\r\n-      />\r\n     </div>\r\n   );\r\n }\r\n"
                 }
             ],
             "date": 1723673495050,

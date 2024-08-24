@@ -1,5 +1,3 @@
-/* index.css */
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -21,24 +19,53 @@
 #root {
   min-height: 100vh;
   display: flex;
-  display: relative;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .app-container {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #030615;
 }
 
 .imgContainer {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.bgImage {
+.bgImage, .bgImage2, .bgImage3 {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  animation: slideshow 15s infinite;
+}
+
+.bgImage2 {
+  animation-delay: 5s;
+}
+
+.bgImage3 {
+  animation-delay: 10s;
+}
+
+@keyframes slideshow {
+  0%, 20% {
+    opacity: 0;
+  }
+  25%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
 }
 
 footer {
@@ -49,7 +76,7 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 footer div {
@@ -59,11 +86,11 @@ footer div {
 }
 
 footer h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 footer h1 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -72,124 +99,46 @@ footer button {
   border: none;
   outline: none;
   color: aqua;
-  padding: 1rem;
+  padding: 1.2rem;
   transition-duration: 200ms;
   cursor: pointer;
 }
 
 footer button i {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 footer button:hover {
   opacity: 0.7;
 }
 
-.bgGradient {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to top, #030615, rgba(255,255,255, 0));
-}
-
-.sidebar {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-}
-
-.bgOverlay {
-  position: absolute;
-  inset: 0;
-  background: #030615;
-  opacity: 0.6;
-}
-
-.sidebarContents {
-  z-index: 15;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  overflow-y: scroll;
-  height: 100%;
-  width: 100%;
-  max-width: 600px; /* Adjust this as needed */
-  margin-left: auto;
-  background: #030615;
-}
-
-.sidebarContents div {
-  flex: 1;
-}
-
-.sidebarContents button {
-  background: transparent;
-  color: aqua;
-  border: none;
-  outline: none;
-  margin-right: auto;
-  cursor: pointer;
-  transition-duration: 200ms;
-  padding: 1rem 0;
-  font-size: 1.2rem; /* Increase the font size for better readability */
-}
-
-.sidebarContents button:hover {
-  opacity: 0.7;
-}
-
-.loadingState {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-.loadingState i {
-  opacity: 0.7; 
-  font-size: 3rem;
-  animation: spin 1s linear infinite; 
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Media query for mobile devices */
 @media (max-width: 640px) {
-  .sidebar {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-  }
-
-  .sidebarContents {
-    width: 100%;
-    padding: 1rem;
-  }
-
   footer {
-    padding: 0.5rem; /* Reduce footer padding on mobile */
-    font-size: 0.8rem; /* Adjust footer text size */
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  footer h1 {
+    font-size: 1rem;
   }
 
   footer button {
-    padding: 0.5rem; /* Adjust button padding */
-    font-size: 1rem; /* Adjust button font size */
+    padding: 0.8rem;
+    font-size: 1.6rem;
   }
+}
 
-  .loadingState i {
-    font-size: 2rem; /* Adjust loading icon size for mobile */
+/* Media query for tablets and small laptops */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .sidebarContents {
+    max-width: 400px;
+  }
+}
+
+/* Media query for larger screens (laptops, desktops) */
+@media (min-width: 1025px) {
+  .sidebarContents {
+    max-width: 600px;
   }
 }

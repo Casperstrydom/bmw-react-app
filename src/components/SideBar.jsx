@@ -7,7 +7,7 @@ export default function SideBar(props) {
       <div className="sidebarContents">
         <div dangerouslySetInnerHTML={{ __html: content }} />
         <button onClick={handleToggleModal}>
-          <i className="fa-solid fa-hand-point-right"></i>
+          {/* Removed the finger icon */}
         </button>
       </div>
     </div>
