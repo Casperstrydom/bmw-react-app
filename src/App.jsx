@@ -73,31 +73,11 @@ function App() {
   }, []);
 
   const bmwInfo = `
-    <p>
      <h2>${data?.title}</h2> 
-     <p><strong>The central part of the BMW logo symbolizes the rotating blades of an airplane which depicts the company's early history of aviation technology.</strong></p>
-     <hr/>
-      <strong>BMW offers amazing driving performance with high-powered engines and a sleek look.</strong> 
-      With ultra-responsive steering and even weight distribution, you can zoom these cars through tight turns. 
-      What's even better is how great they look. BMW, in full Bayerische Motoren Werke AG, is a German automaker 
-      noted for quality sports sedans and motorcycles. Headquarters are in Munich.
-      <strong>It originated in 1916 as Bayerische Flugzeug-Werke,</strong> a builder of aircraft engines, 
-      and soon began producing motorcycles and automobiles. In 1928 BMW bought the Eisenach company, 
-      which built Austin Sevens under licence, but its own first car, the somewhat unsuccessful Wartburg, 
-      did not appear until 1933. In the 1950s BMW’s luxury cars were considered outmoded and uncompetitive, 
-      and the company was near bankruptcy until it returned to profitability with the introduction of its 
-      700 series of sedans in 1959 and the modern 1500 model in 1962.
-    </p>
-    <p>
-      <strong>BMW has only three colors: Blue, white, and black. </strong> 
-      Blue stands for strength and dependability, white represents purity and elegance, and black is used 
-      to represent technology and innovation. Together, these colors convey a powerful message about the 
-      company’s commitment to excellence.
-    </p>
   `;
 
   return (
-    <div className="App">
+    <div className="App"> 
       <header className="App-header">
         <Main data={data} stopSlideshow={showModal} /> {/* Pass showModal as stopSlideshow */}
       </header>

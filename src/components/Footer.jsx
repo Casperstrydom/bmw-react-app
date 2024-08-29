@@ -85,8 +85,7 @@ export default function Footer(props) {
         </div>
       </div>
       <div className="text-center">
-        <h2 className="mb-0">{data?.title}</h2>
-        <h1 className="mb-0"> PROJECT</h1>
+        <h1 className="mb-0"></h1>
       </div>
     </footer>
   );
