@@ -10,7 +10,7 @@ export default function SideBar(props) {
         onClick={handleToggleModal}
         className="bg-overlay bg-black opacity-75 flex-grow-1"
       ></div>
-      <div className="sidebar-contents bg-blue p-3">
+      <div className="sidebar-contents bg-blue p-3 overflow-auto" style={{ height: '100vh' }}>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {/* Close button removed */}
       </div>

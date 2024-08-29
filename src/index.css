@@ -186,6 +186,7 @@ footer {
   overflow-y: auto; /* Enable vertical scrolling if content overflows */
   z-index: 1001; /* Ensure the sidebar is above other elements */
   box-shadow: -2px 0 5px rgba(64, 5, 227, 0.716); /* Optional shadow for better visibility */
+  scrollbar-width: thin;
 }
 
 .modal-content {
