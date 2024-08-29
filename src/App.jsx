@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import Main from "./components/Main";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "./index.css"; // Import custom CSS file for additional styles
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -21,8 +23,7 @@ function App() {
       if (localStorage.getItem(localKey)) {
         const cachedData = JSON.parse(localStorage.getItem(localKey));
         setData(cachedData);
-        setIsLoading(false); // No need to display loader if data is cached
-        console.log('Fetched from cache today');
+        setIsLoading(false);
         return;
       }
 
@@ -50,19 +51,19 @@ function App() {
             subscriberCount: channelInfo.statistics.subscriberCount,
             viewCount: channelInfo.statistics.viewCount,
             videoCount: channelInfo.statistics.videoCount,
-            hdurl: "https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg",
-            hdurl2: "https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg",
+            hdurl:
+              "https://i.pinimg.com/originals/f4/d0/92/f4d0926b86f2c466e4ca6ef4ef199ddc.jpg",
+            hdurl2:
+              "https://wallpapers.com/images/hd/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg",
           };
 
           localStorage.setItem(localKey, JSON.stringify(apiData));
           setData(apiData);
-          console.log('Fetched from API today');
         } else {
           setData(null);
         }
       } catch (error) {
         setError(error.message);
-        console.error('Fetch error:', error);
       } finally {
         setIsLoading(false);
       }
@@ -74,48 +75,41 @@ function App() {
   const bmwInfo = `
     <p>
      <h2>${data?.title}</h2> 
-     <p><strong>The central part of the BMW logo symbolises the rotating blades of an airplane which depicts company's early history of aviation technology.</strong></p>
-    
+     <p><strong>The central part of the BMW logo symbolizes the rotating blades of an airplane which depicts the company's early history of aviation technology.</strong></p>
      <hr/>
       <strong>BMW offers amazing driving performance with high-powered engines and a sleek look.</strong> 
       With ultra-responsive steering and even weight distribution, you can zoom these cars through tight turns. 
       What's even better is how great they look. BMW, in full Bayerische Motoren Werke AG, is a German automaker 
       noted for quality sports sedans and motorcycles. Headquarters are in Munich.
-      <strong>It originated in 1916 as Bayerische Flugzeug-Werke,</strong> a builder of aircraft engines, but assumed 
-      the name Bayerische Motoren Werke in July 1917 and began producing motorcycles in the 1920s. BMW entered the automobile 
-      business in 1928. The company’s R32 motorcycle set a world speed record that was not broken until 1937. During World War II, 
-      BMW built the world’s first jet airplane engines, used by the Luftwaffe, Germany’s air force. After the war, the company tried 
-      to move into the small-car market but found that it could not compete effectively against Volkswagen’s compact, inexpensive autos. 
-      By 1959 the company was on the verge of bankruptcy, and its managers were planning to sell the firm to Daimler-Benz.
-      <strong>In that year, however, BMW pulled out of its financial slump;</strong> German entrepreneur Herbert Quandt acquired a controlling 
-      interest in the firm, and BMW introduced its 700 series, soon followed by the equally successful 1500 model. At about the same time, 
-      the company introduced a new series of motorcycles that were particularly popular in the United States.
-      <strong>BMW was firmly established as a premium automobile brand by the end of the 20th century.</strong>
-    </p> <hr/>
-    <p>BMW THANK'S ALL OUR SPONSORS CLIENTS RETAILERS ENGINEERS FAN BASE GLOBAL.</p>
+      <strong>It originated in 1916 as Bayerische Flugzeug-Werke,</strong> a builder of aircraft engines, 
+      and soon began producing motorcycles and automobiles. In 1928 BMW bought the Eisenach company, 
+      which built Austin Sevens under licence, but its own first car, the somewhat unsuccessful Wartburg, 
+      did not appear until 1933. In the 1950s BMW’s luxury cars were considered outmoded and uncompetitive, 
+      and the company was near bankruptcy until it returned to profitability with the introduction of its 
+      700 series of sedans in 1959 and the modern 1500 model in 1962.
+    </p>
+    <p>
+      <strong>BMW has only three colors: Blue, white, and black. </strong> 
+      Blue stands for strength and dependability, white represents purity and elegance, and black is used 
+      to represent technology and innovation. Together, these colors convey a powerful message about the 
+      company’s commitment to excellence.
+    </p>
   `;
 
   return (
-    <>
-      {isLoading ? (
-        <div className="loadingState">
-          <i className="fa-solid fa-gear fa-spin"></i>
-        </div>
-      ) : (
-        <>
-          {data ? (
-            <Main data={data} />
-          ) : (
-            <div className="loadingState">
-              <i className="fa-solid fa-gear fa-spin"></i>
-            </div>
-          )}
-          {showModal && <SideBar content={bmwInfo} handleToggleModal={handleToggleModal} />}
-          {data && <Footer data={data} handleToggleModal={handleToggleModal} />}
-          {error && <p>Error: {error}</p>}
-        </>
+    <div className="App">
+      <header className="App-header">
+        <Main data={data} stopSlideshow={showModal} /> {/* Pass showModal as stopSlideshow */}
+      </header>
+      <Footer
+        handleToggleModal={handleToggleModal}
+        data={data}
+        sidebarActive={showModal}
+      />
+      {showModal && (
+        <SideBar handleToggleModal={handleToggleModal} content={bmwInfo} />
       )}
-    </>
+    </div>
   );
 }
 

@@ -1,9 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Existing CSS */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: white;
-  background-color: #000207;
+  color: rgb(0, 0, 0);
+  background-color: #0856f3;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,31 +22,61 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: #0d6efd;
+  text-align: var(--bs-body-text-align);
+  background-color: #070303;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgb(0 2 4) !important;
 }
 
 #root {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow-x: hidden;
 }
 
 .app-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #030615;
+  background-color: #000102;
 }
 
 .imgContainer {
-  position: relative;
+  position: absolute; /* Ensure it covers the full screen */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
-.bgImage, .bgImage2, .bgImage3 {
+.bgImage,
+.bgImage2,
+.bgImage3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,88 +96,100 @@
 }
 
 @keyframes slideshow {
-  0%, 20% {
+  0%,
+  20% {
     opacity: 0;
   }
-  25%, 45% {
+  25%,
+  45% {
     opacity: 1;
   }
-  50%, 100% {
+  50%,
+  100% {
     opacity: 0;
   }
 }
 
+/* Footer Styling */
 footer {
+  display: flex;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem;
+  background: #f1f2f3; /* Footer background color */
+  color: rgb(11, 19, 176);
+  padding: 1rem;
+  box-shadow: 0 -2px 5px rgba(16, 4, 241, 0.597);
+  z-index: 1000; /* Ensure footer is above other elements */
 }
 
-footer div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-footer h2 {
-  font-size: 1.6rem;
-}
-
-footer h1 {
-  font-size: 1.2rem;
-  font-weight: 200;
-}
-
-footer button {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: aqua;
-  padding: 1.2rem;
-  transition-duration: 200ms;
-  cursor: pointer;
-}
-
-footer button i {
-  font-size: 2rem;
-}
-
-footer button:hover {
-  opacity: 0.7;
-}
-
-/* Media query for mobile devices */
+/* Ensure footer and button links for different screen sizes */
 @media (max-width: 640px) {
   footer {
     padding: 0.5rem;
     font-size: 0.8rem;
   }
 
-  footer h1 {
-    font-size: 1rem;
+  .footer-button {
+    padding: 0.8rem;
+    font-size: 1.6rem;
   }
 
-  footer button {
-    padding: 0.8rem;
+  .link-buttons {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .footer-button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-button {
     font-size: 1.6rem;
   }
 }
 
-/* Media query for tablets and small laptops */
-@media (min-width: 641px) and (max-width: 1024px) {
-  .sidebarContents {
-    max-width: 400px;
-  }
+/* Styling for the button links */
+.link-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* Media query for larger screens (laptops, desktops) */
-@media (min-width: 1025px) {
-  .sidebarContents {
-    max-width: 600px;
-  }
+.link-buttons button {
+  background-color: #450bcd;
+  color: #000000;
+  border: 1px solid #0135e0;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link-buttons button:hover {
+  background-color: #010111;
+  color: #010719;
+}
+
+/* CSS for scrollable modal content */
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Adjust width as necessary */
+  height: 100vh;
+  background-color: #1d0bad; /* Background color of the sidebar */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  z-index: 1001; /* Ensure the sidebar is above other elements */
+  box-shadow: -2px 0 5px rgba(64, 5, 227, 0.716); /* Optional shadow for better visibility */
+}
+
+.modal-content {
+  padding: 1rem;
+  max-height: 90vh; /* Limit the height of the modal content */
+  overflow-y: auto; /* Enable scrolling for overflowing content */
 }

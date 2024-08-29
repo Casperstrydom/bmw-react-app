@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1723700137332,
@@ -24,6 +24,10 @@
                 {
                     "date": 1724235188305,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+<!doctype html>\n+<html lang=\"en\">\n+  <head>\n+    <meta charset=\"UTF-8\" />\n+    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n+    <title>BMW PROJECT</title>\n+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" />\n+  </head>\n+  <body>\n+    <div id=\"root\"></div>\n+    <script type=\"module\" src=\"/src/main.jsx\"></script>\n+  </body>\n+</html>\n"
+                },
+                {
+                    "date": 1724751412627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,18 @@\n <!doctype html>\n <html lang=\"en\">\n   <head>\n     <meta charset=\"UTF-8\" />\n-    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>BMW PROJECT</title>\n+    <!-- Link to Bootstrap CSS -->\n+    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css\" />\n+    <!-- Link to Font Awesome for icons -->\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" />\n+    <!-- Link to your custom CSS file -->\n+    <link rel=\"stylesheet\" href=\"/src/index.css\" />\n   </head>\n   <body>\n     <div id=\"root\"></div>\n     <script type=\"module\" src=\"/src/main.jsx\"></script>\n   </body>\n </html>\n-<!doctype html>\n-<html lang=\"en\">\n-  <head>\n-    <meta charset=\"UTF-8\" />\n-    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n-    <title>BMW PROJECT</title>\n-    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" />\n-  </head>\n-  <body>\n-    <div id=\"root\"></div>\n-    <script type=\"module\" src=\"/src/main.jsx\"></script>\n-  </body>\n-</html>\n"
                 }
             ],
             "date": 1723700137332,
